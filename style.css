@@ -1130,32 +1130,40 @@ h1, h2, h3, h4 {
 }
 
 @media (max-width: 768px) {
-    /* CRITICAL MOBILE FIXES */
+    /* CRITICAL MOBILE FIXES & ANTI-OVERFLOW RULES */
     
-    /* 1. KUTU MODELİNİ DÜZELT (Zaten globalde var ama mobil için pekiştiriyoruz) */
-    * {
-      box-sizing: border-box !important;
+    html, body {
+        width: 100%;
+        max-width: 100%;
+        overflow-x: hidden !important; /* Kesin olarak sağdaki beyaz boşluğu ve taşmayı engeller */
+        margin: 0;
+        padding: 0;
     }
-    
-    /* 2. MOBİL İÇİN TAM GENİŞLİK AYARI */
-    body {
-      width: 100% !important;
-      overflow-x: hidden !important;
+
+    section, header, footer, main {
+        width: 100%;
+        max-width: 100%;
+        overflow-x: hidden;
     }
-    
-    /* 3. TÜM BÖLÜMLERİ EKRANA YAPIŞTIR */
-    section, .container, .hero {
-      width: 100% !important;
-      max-width: 100vw !important; /* Ekranın tam genişliğini zorla */
-      padding-left: 0 !important;  /* Kenarlarda boşluk kalmasını istemediğin için 0 yapıldı */
-      padding-right: 0 !important;
-      margin: 0 !important;
+
+    .container {
+        width: 100% !important;
+        max-width: 100% !important;
+        padding: 0 1rem !important; /* İçeriklerin çerçeveye yapışmasını önlemek için güvenli pay */
+        box-sizing: border-box;
     }
-    
-    /* İçeriklerin tamamen ekrana yapışıp okunamayacak duruma gelmemesi için sadece iç metinlere ufak bir güvenli boşluk */
-    .hero-content, .section-header, .story-text, .menu-card, .feature-item, .testimonial-card, .bento-item, .footer-contact, .footer-hours, .footer-brand, .footer-cta {
-        padding-left: 1rem !important;
-        padding-right: 1rem !important;
+
+    /* Sabit 'px' genişliklerini esnek (%) yapıyoruz */
+    .hero-content, .story-text, .section-header, .story-image {
+        width: 100%;
+        max-width: 100% !important;
+        box-sizing: border-box;
+    }
+
+    /* Kart ve resimlerin ekrandan taşmasını engelliyoruz */
+    img, video, iframe, .menu-card, .testimonial-card, .bento-item, .metro-line-card {
+        max-width: 100% !important;
+        box-sizing: border-box;
     }
     
     .experience-badge {
