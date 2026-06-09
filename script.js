@@ -53,10 +53,10 @@ document.addEventListener('DOMContentLoaded', () => {
     // Initialize AOS (Animate On Scroll)
     if (typeof AOS !== 'undefined') {
         AOS.init({
-            duration: 800,
-            easing: 'ease-out-cubic',
+            duration: 500,
+            easing: 'ease-out',
             once: true, // Animation only happens once when scrolling down
-            offset: 80, // Offset in px before animation triggers
+            offset: 30, // Offset in px before animation triggers
         });
     }
 
