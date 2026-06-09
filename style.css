@@ -652,8 +652,7 @@ h1, h2, h3, h4 {
 /* Enriched Menu Section */
 .menu-section {
     padding: 8rem 0;
-    background: var(--bg-light);
-    position: relative;
+    background: #0a0a0a;
 }
 
 .menu-section::before {
@@ -686,7 +685,7 @@ h1, h2, h3, h4 {
 
 .menu-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
     gap: 2.5rem;
 }
 
@@ -1127,11 +1126,30 @@ h1, h2, h3, h4 {
 /* Responsive */
 @media (max-width: 1024px) {
     .story-grid { grid-template-columns: 1fr; gap: 4rem; }
-    .experience-badge { right: 20px; bottom: 20px; width: 140px; height: 140px; }
-    .experience-badge .number { font-size: 2rem; }
+    .story-image { max-width: 600px; margin: 0 auto; }
 }
 
 @media (max-width: 768px) {
+    /* CRITICAL MOBILE FIXES */
+    .container {
+        padding: 0 1.2rem;
+    }
+    
+    .experience-badge {
+        right: 10px;
+        bottom: -20px;
+        width: 140px;
+        height: 140px;
+        padding: 1rem;
+    }
+    
+    .experience-badge .number { font-size: 2rem; }
+    .experience-badge .text { font-size: 0.9rem; }
+    
+    .menu-grid, .testimonials-grid {
+        grid-template-columns: 1fr;
+    }
+    
     .nav-links {
         position: absolute; top: 100%; left: 0; width: 100%;
         background: rgba(7,7,7,0.98); flex-direction: column; padding: 2rem 0; gap: 1.5rem;
@@ -1142,7 +1160,7 @@ h1, h2, h3, h4 {
     .footer-grid { grid-template-columns: 1fr; gap: 3rem; }
     .footer-cta { padding: 3rem 1.5rem; transform: translateY(-30px); }
     .footer-cta h2 { font-size: 2rem; }
-    .features-flex { flex-direction: column; }
+    .features-flex { flex-direction: column; gap: 2rem; }
     .hero-buttons { flex-direction: column; width: 100%; }
     .hero-buttons .btn-primary, .hero-buttons .btn-secondary { width: 100%; justify-content: center; }
 }
