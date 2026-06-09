@@ -1131,8 +1131,31 @@ h1, h2, h3, h4 {
 
 @media (max-width: 768px) {
     /* CRITICAL MOBILE FIXES */
-    .container {
-        padding: 0 1.2rem;
+    
+    /* 1. KUTU MODELİNİ DÜZELT (Zaten globalde var ama mobil için pekiştiriyoruz) */
+    * {
+      box-sizing: border-box !important;
+    }
+    
+    /* 2. MOBİL İÇİN TAM GENİŞLİK AYARI */
+    body {
+      width: 100% !important;
+      overflow-x: hidden !important;
+    }
+    
+    /* 3. TÜM BÖLÜMLERİ EKRANA YAPIŞTIR */
+    section, .container, .hero {
+      width: 100% !important;
+      max-width: 100vw !important; /* Ekranın tam genişliğini zorla */
+      padding-left: 0 !important;  /* Kenarlarda boşluk kalmasını istemediğin için 0 yapıldı */
+      padding-right: 0 !important;
+      margin: 0 !important;
+    }
+    
+    /* İçeriklerin tamamen ekrana yapışıp okunamayacak duruma gelmemesi için sadece iç metinlere ufak bir güvenli boşluk */
+    .hero-content, .section-header, .story-text, .menu-card, .feature-item, .testimonial-card, .bento-item, .footer-contact, .footer-hours, .footer-brand, .footer-cta {
+        padding-left: 1rem !important;
+        padding-right: 1rem !important;
     }
     
     .experience-badge {
