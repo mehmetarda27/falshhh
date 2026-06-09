@@ -323,11 +323,21 @@ h1, h2, h3, h4 {
     border-radius: 20px;
 }
 
+.story-overlay {
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: rgba(0,0,0,0.5); /* Overlay to make text pop */
+    border-radius: 20px;
+    z-index: 1;
+}
+
 .story-image img {
     width: 100%;
     border-radius: 20px;
     display: block;
     box-shadow: 0 20px 50px rgba(0,0,0,0.5);
+    position: relative;
+    z-index: 0;
 }
 
 .experience-badge {
@@ -347,6 +357,7 @@ h1, h2, h3, h4 {
     border: 5px solid var(--primary);
     box-shadow: 0 15px 35px rgba(255, 60, 0, 0.2);
     text-align: center;
+    z-index: 2; /* Ensure badge is above overlay */
 }
 
 .experience-badge .number {

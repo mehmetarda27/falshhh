@@ -3,9 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Flash Han Tantuni Döner | Lezzetin Ateşli Hali</title>
+    <title>Flash Han Tantuni Döner | Mersin'in En İyi Tantunicisi</title>
     <meta name="description" content="Flash Han Tantuni Döner. Geleneksel Türk lezzetlerinin modern dokunuşla buluştuğu nokta. İskender Döner, Yoğurtlu Tantuni ve daha fazlası.">
-    <!-- Google Fonts -->
+    <!-- Google Fonts & Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Playfair+Display:ital,wght@0,600;0,800;1,600&display=swap" rel="stylesheet">
@@ -56,6 +57,7 @@
         <div class="container">
             <div class="story-grid">
                 <div class="story-image reveal">
+                    <div class="story-overlay"></div>
                     <img src="./assets/hero_bg.png" alt="Flash Han Mutfak">
                     <div class="experience-badge">
                         <span class="number">100%</span>
@@ -313,8 +315,9 @@
             <div class="footer-cta reveal">
                 <h2>Lezzet Şölenine Hazır Mısınız?</h2>
                 <p>Hemen masanızı ayırtın veya paket sipariş vererek Flash Han Tantuni Döner lezzetini evinize taşıyın.</p>
-                <div class="cta-buttons">
-                    <a href="tel:+905551234567" class="btn-primary"><ion-icon name="call-outline"></ion-icon> Sipariş Hattı: 0555 123 45 67</a>
+                <div class="cta-buttons" style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+                    <a href="tel:+905551234567" class="btn-primary"><i class="fas fa-phone-alt"></i> Sipariş Hattı: 0555 123 45 67</a>
+                    <a href="https://wa.me/905551234567" target="_blank" class="btn-primary" style="background: #25D366; border-color: #25D366;"><i class="fab fa-whatsapp"></i> Hemen Sipariş Ver</a>
                 </div>
             </div>
             
@@ -353,10 +356,10 @@
     <!-- Floating Contact Buttons -->
     <div class="floating-contacts">
         <a href="tel:+905551234567" class="float-btn phone-btn" title="Bizi Arayın">
-            <ion-icon name="call"></ion-icon>
+            <i class="fas fa-phone-alt"></i>
         </a>
         <a href="https://wa.me/905551234567" target="_blank" class="float-btn wa-btn" title="WhatsApp'tan Yazın">
-            <ion-icon name="logo-whatsapp"></ion-icon>
+            <i class="fab fa-whatsapp"></i>
         </a>
     </div>
 
