@@ -1,4 +1,15 @@
 document.addEventListener('DOMContentLoaded', () => {
+    // Preloader Logic
+    window.addEventListener('load', () => {
+        const preloader = document.getElementById('preloader');
+        if (preloader) {
+            // Add a tiny delay to ensure a smooth transition even if it loads too fast
+            setTimeout(() => {
+                preloader.classList.add('fade-out');
+            }, 300);
+        }
+    });
+
     // Navbar Scroll Effect
     const navbar = document.getElementById('navbar');
     
@@ -15,41 +26,39 @@ document.addEventListener('DOMContentLoaded', () => {
     const navLinks = document.querySelector('.nav-links');
     const navItems = document.querySelectorAll('.nav-links a');
 
-    hamburger.addEventListener('click', () => {
-        navLinks.classList.toggle('active');
-        const icon = hamburger.querySelector('ion-icon');
-        if(navLinks.classList.contains('active')) {
-            icon.setAttribute('name', 'close-outline');
-        } else {
-            icon.setAttribute('name', 'menu-outline');
-        }
-    });
+    if (hamburger) {
+        hamburger.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            const icon = hamburger.querySelector('ion-icon');
+            if(navLinks.classList.contains('active')) {
+                icon.setAttribute('name', 'close-outline');
+            } else {
+                icon.setAttribute('name', 'menu-outline');
+            }
+        });
+    }
 
     // Close menu when clicking a link
-    navItems.forEach(item => {
-        item.addEventListener('click', () => {
-            navLinks.classList.remove('active');
-            hamburger.querySelector('ion-icon').setAttribute('name', 'menu-outline');
+    if (navItems) {
+        navItems.forEach(item => {
+            item.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+                if(hamburger.querySelector('ion-icon')){
+                    hamburger.querySelector('ion-icon').setAttribute('name', 'menu-outline');
+                }
+            });
         });
-    });
+    }
 
-    // Scroll Reveal Animation
-    const revealElements = document.querySelectorAll('.reveal');
-
-    const revealOnScroll = () => {
-        for (let i = 0; i < revealElements.length; i++) {
-            const windowHeight = window.innerHeight;
-            const elementTop = revealElements[i].getBoundingClientRect().top;
-            const elementVisible = 100;
-
-            if (elementTop < windowHeight - elementVisible) {
-                revealElements[i].classList.add('active');
-            }
-        }
-    };
-
-    window.addEventListener('scroll', revealOnScroll);
-    revealOnScroll(); // Trigger once on load
+    // Initialize AOS (Animate On Scroll)
+    if (typeof AOS !== 'undefined') {
+        AOS.init({
+            duration: 800,
+            easing: 'ease-out-cubic',
+            once: true, // Animation only happens once when scrolling down
+            offset: 80, // Offset in px before animation triggers
+        });
+    }
 
     // --- Drawer Logic (SSS & Privacy) ---
     const openSssBtn = document.getElementById('openSssDrawer');

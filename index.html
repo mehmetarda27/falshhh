@@ -5,8 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Flash Han Tantuni Döner | Mersin'in En İyi Tantunicisi</title>
     <meta name="description" content="Flash Han Tantuni Döner. Geleneksel Türk lezzetlerinin modern dokunuşla buluştuğu nokta. İskender Döner, Yoğurtlu Tantuni ve daha fazlası.">
-    <!-- Google Fonts & Font Awesome -->
+    <!-- Google Fonts & Font Awesome & AOS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Playfair+Display:ital,wght@0,600;0,800;1,600&display=swap" rel="stylesheet">
@@ -15,6 +16,15 @@
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </head>
 <body>
+
+    <!-- Preloader -->
+    <div class="preloader" id="preloader">
+        <div class="loader-content">
+            <i class="fas fa-fire loader-icon"></i>
+            <div class="loader-text">Flash Han</div>
+            <div class="loader-line"></div>
+        </div>
+    </div>
 
     <!-- Navbar -->
     <header class="navbar" id="navbar">
@@ -27,7 +37,7 @@
                 <a href="#about">Hakkımızda</a>
                 <a href="#menu">Menü</a>
                 <a href="#testimonials">Yorumlar</a>
-                <a href="#contact" class="btn-primary">Rezervasyon Yap</a>
+                <button id="openSssDrawer" class="btn-primary" style="border: none;">SSS & Bilgi</button>
             </nav>
             <div class="hamburger">
                 <ion-icon name="menu-outline"></ion-icon>
@@ -39,15 +49,15 @@
     <section class="hero" id="home">
         <div class="hero-overlay"></div>
         <div class="hero-content">
-            <div class="badge-top reveal">Yılların Eskimeyen Lezzeti</div>
-            <h1 class="hero-title">Gerçek Lezzet,<br><span>Gerçek Ateş!</span></h1>
-            <p class="hero-subtitle">Flash Han Tantuni Döner olarak, özenle seçilmiş etleri ustalıkla işliyor, odun ateşinin efsununu tabağınıza taşıyoruz. Etin en yumuşak, baharatın en dengeli hali burada.</p>
-            <div class="hero-buttons">
+            <div class="badge-top" data-aos="fade-down" data-aos-delay="800">Yılların Eskimeyen Lezzeti</div>
+            <h1 class="hero-title" data-aos="zoom-in" data-aos-delay="1000">Gerçek Lezzet,<br><span>Gerçek Ateş!</span></h1>
+            <p class="hero-subtitle" data-aos="fade-up" data-aos-delay="1200">Flash Han Tantuni Döner olarak, özenle seçilmiş etleri ustalıkla işliyor, odun ateşinin efsununu tabağınıza taşıyoruz. Etin en yumuşak, baharatın en dengeli hali burada.</p>
+            <div class="hero-buttons" data-aos="fade-up" data-aos-delay="1400">
                 <a href="#menu" class="btn-primary">Menümüzü İnceleyin</a>
                 <a href="#about" class="btn-secondary">Hikayemiz</a>
             </div>
         </div>
-        <div class="scroll-indicator">
+        <div class="scroll-indicator" data-aos="fade-up" data-aos-delay="1600">
             <ion-icon name="chevron-down-outline"></ion-icon>
         </div>
     </section>
@@ -56,15 +66,15 @@
     <section class="story-section" id="about">
         <div class="container">
             <div class="story-grid">
-                <div class="story-image reveal">
+                <div class="story-image" data-aos="fade-right">
                     <div class="story-overlay"></div>
                     <img src="./assets/hero_bg.png" alt="Flash Han Mutfak">
-                    <div class="experience-badge">
+                    <div class="experience-badge" data-aos="zoom-in" data-aos-delay="300">
                         <span class="number">100%</span>
                         <span class="text">Odun Ateşi &<br>Doğal Malzeme</span>
                     </div>
                 </div>
-                <div class="story-text reveal" style="transition-delay: 0.2s;">
+                <div class="story-text" data-aos="fade-left" data-aos-delay="100">
                     <div class="section-tag">Hikayemiz</div>
                     <h2>Ustalık, Sabır ve <br><span class="highlight">Ateşin Uyumu</span></h2>
                     <p>Flash Han Tantuni Döner sıradan bir restoran değil; yıllardır etin dilinden anlayan ustaların, geleneksel tarifleri en modern ve hijyenik ortamlarda hazırladığı bir lezzet durağıdır.</p>
@@ -82,27 +92,27 @@
     <!-- Journey / Timeline Section -->
     <section class="journey-section">
         <div class="container">
-            <div class="section-header reveal" style="margin-bottom: 3rem;">
+            <div class="section-header" data-aos="fade-up" style="margin-bottom: 3rem;">
                 <div class="section-tag">Bize Dair</div>
                 <h2>Lezzet Yolculuğumuz</h2>
                 <p>Bir porsiyon efsanevi lezzet masanıza gelene kadar hangi aşamalardan geçiyor?</p>
             </div>
             
-            <div class="metro-wrapper reveal">
+            <div class="metro-wrapper" data-aos="fade-up" data-aos-delay="200">
                 <div class="metro-line-card">
-                  <div class="metro-line-point">
+                  <div class="metro-line-point" data-aos="zoom-in" data-aos-delay="300">
                     <p>1. Etin Seçimi</p>
                     <div class="pin"></div>
                   </div>
-                  <div class="metro-line-point">
+                  <div class="metro-line-point" data-aos="zoom-in" data-aos-delay="400">
                     <p>2. Terbiye İşlemi</p>
                     <div class="pin"></div>
                   </div>
-                  <div class="metro-line-point">
+                  <div class="metro-line-point" data-aos="zoom-in" data-aos-delay="500">
                     <p>3. Odun Ateşi</p>
                     <div class="pin"></div>
                   </div>
-                  <div class="metro-line-point">
+                  <div class="metro-line-point" data-aos="zoom-in" data-aos-delay="600">
                     <p>4. Usta Sunumu</p>
                     <div class="pin"></div>
                   </div>
@@ -119,7 +129,7 @@
     <!-- Enriched Menu Section -->
     <section class="menu-section" id="menu">
         <div class="container">
-            <div class="section-header reveal">
+            <div class="section-header" data-aos="fade-up">
                 <div class="section-tag">Özel Lezzetlerimiz</div>
                 <h2>Menüden Seçmeler</h2>
                 <p>Ustalıkla hazırlanmış, her lokması ayrı bir ziyafet.</p>
@@ -127,7 +137,7 @@
             
             <div class="menu-grid">
                 <!-- Card 1 -->
-                <div class="menu-card reveal">
+                <div class="menu-card" data-aos="fade-up" data-aos-delay="100">
                     <div class="card-image">
                         <img src="./assets/tantuni.png" alt="Özel Yoğurtlu Tantuni">
                         <div class="price-tag">₺240</div>
@@ -143,7 +153,7 @@
                 </div>
 
                 <!-- Card 2 -->
-                <div class="menu-card reveal" style="transition-delay: 0.1s;">
+                <div class="menu-card" data-aos="fade-up" data-aos-delay="200">
                     <div class="card-image">
                         <img src="./assets/doner.png" alt="Flash Han İskender Döner">
                         <div class="price-tag">₺320</div>
@@ -159,7 +169,7 @@
                 </div>
 
                 <!-- Card 3 -->
-                <div class="menu-card reveal" style="transition-delay: 0.2s;">
+                <div class="menu-card" data-aos="fade-up" data-aos-delay="300">
                     <div class="card-image">
                         <img src="./assets/tantuni.png" alt="Ekmek Arası Tantuni" style="filter: sepia(0.3) hue-rotate(15deg);">
                         <div class="price-tag">₺180</div>
@@ -175,7 +185,7 @@
                 </div>
 
                 <!-- Card 4 (Dessert) -->
-                <div class="menu-card reveal" style="transition-delay: 0.3s;">
+                <div class="menu-card" data-aos="fade-up" data-aos-delay="400">
                     <div class="card-image">
                         <img src="./assets/kunefe.png" alt="Gaziantep Usulü Künefe">
                         <div class="price-tag">₺150</div>
@@ -191,7 +201,7 @@
                 </div>
             </div>
             
-            <div class="menu-action reveal" style="text-align: center; margin-top: 4rem;">
+            <div class="menu-action" data-aos="fade-up" style="text-align: center; margin-top: 4rem;">
                 <a href="#" class="btn-secondary">Tüm Menüyü Görüntüle</a>
             </div>
         </div>
@@ -201,17 +211,17 @@
     <section class="features-banner">
         <div class="container">
             <div class="features-flex">
-                <div class="feature-item reveal">
+                <div class="feature-item" data-aos="zoom-in" data-aos-delay="100">
                     <ion-icon name="leaf-outline"></ion-icon>
                     <h4>%100 Yerli Malzeme</h4>
                     <p>Günlük temin edilen en taze ve yöresel ürünler.</p>
                 </div>
-                <div class="feature-item reveal" style="transition-delay: 0.1s;">
+                <div class="feature-item" data-aos="zoom-in" data-aos-delay="200">
                     <ion-icon name="restaurant-outline"></ion-icon>
                     <h4>Usta Elleri</h4>
                     <p>Yıllarını bu mesleğe vermiş profesyonel aşçılar.</p>
                 </div>
-                <div class="feature-item reveal" style="transition-delay: 0.2s;">
+                <div class="feature-item" data-aos="zoom-in" data-aos-delay="300">
                     <ion-icon name="time-outline"></ion-icon>
                     <h4>Hızlı Servis</h4>
                     <p>Sıcak sıcak, lezzeti soğumadan anında masanızda.</p>
@@ -223,12 +233,12 @@
     <!-- Testimonials Section -->
     <section class="testimonials" id="testimonials">
         <div class="container">
-            <div class="section-header reveal">
+            <div class="section-header" data-aos="fade-up">
                 <div class="section-tag">Misafirlerimiz Ne Diyor?</div>
                 <h2>Müşteri Yorumları</h2>
             </div>
             <div class="testimonials-grid">
-                <div class="testimonial-card reveal">
+                <div class="testimonial-card" data-aos="flip-up" data-aos-delay="100">
                     <div class="stars">
                         <ion-icon name="star"></ion-icon><ion-icon name="star"></ion-icon><ion-icon name="star"></ion-icon><ion-icon name="star"></ion-icon><ion-icon name="star"></ion-icon>
                     </div>
@@ -242,7 +252,7 @@
                     </div>
                 </div>
 
-                <div class="testimonial-card reveal" style="transition-delay: 0.1s;">
+                <div class="testimonial-card" data-aos="flip-up" data-aos-delay="200">
                     <div class="stars">
                         <ion-icon name="star"></ion-icon><ion-icon name="star"></ion-icon><ion-icon name="star"></ion-icon><ion-icon name="star"></ion-icon><ion-icon name="star"></ion-icon>
                     </div>
@@ -256,7 +266,7 @@
                     </div>
                 </div>
 
-                <div class="testimonial-card reveal" style="transition-delay: 0.2s;">
+                <div class="testimonial-card" data-aos="flip-up" data-aos-delay="300">
                     <div class="stars">
                         <ion-icon name="star"></ion-icon><ion-icon name="star"></ion-icon><ion-icon name="star"></ion-icon><ion-icon name="star"></ion-icon><ion-icon name="star-half"></ion-icon>
                     </div>
@@ -274,34 +284,34 @@
     </section>
 
     <!-- Online Sipariş Bento Section -->
-    <section class="bento-section reveal">
+    <section class="bento-section">
         <div class="container">
-            <div class="section-header" style="margin-bottom: 3rem;">
+            <div class="section-header" data-aos="fade-up" style="margin-bottom: 3rem;">
                 <div class="section-tag">Online Sipariş</div>
                 <h2>Tek Tıkla Kapınızda</h2>
             </div>
             
             <div class="bento-grid">
                 <!-- Header Block -->
-                <div class="bento-item bento-header-block">
+                <div class="bento-item bento-header-block" data-aos="zoom-in" data-aos-delay="100">
                     <h3>Acıktınız mı? Hemen Sipariş Verin!</h3>
                     <p>Flash Han'ın eşsiz lezzetleri, güvendiğiniz platformlar aracılığıyla sıcacık ve hızlı bir şekilde kapınıza geliyor. Seçiminizi yapın ve lezzet şölenini başlatın.</p>
                 </div>
                 
                 <!-- Socials / Delivery Apps Blocks -->
-                <a href="#" class="bento-item bento-block bg-yemeksepeti" target="_blank" title="Yemeksepeti'nden Sipariş Ver">
+                <a href="#" class="bento-item bento-block bg-yemeksepeti" data-aos="zoom-in" data-aos-delay="200" target="_blank" title="Yemeksepeti'nden Sipariş Ver">
                     <ion-icon name="restaurant-outline"></ion-icon>
                     <span>Yemeksepeti</span>
                 </a>
-                <a href="#" class="bento-item bento-block bg-getir" target="_blank" title="GetirYemek'ten Sipariş Ver">
+                <a href="#" class="bento-item bento-block bg-getir" data-aos="zoom-in" data-aos-delay="300" target="_blank" title="GetirYemek'ten Sipariş Ver">
                     <ion-icon name="bicycle-outline"></ion-icon>
                     <span>GetirYemek</span>
                 </a>
-                <a href="#" class="bento-item bento-block bg-trendyol" target="_blank" title="Trendyol Yemek'ten Sipariş Ver">
+                <a href="#" class="bento-item bento-block bg-trendyol" data-aos="zoom-in" data-aos-delay="400" target="_blank" title="Trendyol Yemek'ten Sipariş Ver">
                     <ion-icon name="bag-handle-outline"></ion-icon>
                     <span>Trendyol Yemek</span>
                 </a>
-                <a href="#" class="bento-item bento-block bg-migros" target="_blank" title="Migros Yemek'ten Sipariş Ver">
+                <a href="#" class="bento-item bento-block bg-migros" data-aos="zoom-in" data-aos-delay="500" target="_blank" title="Migros Yemek'ten Sipariş Ver">
                     <ion-icon name="cart-outline"></ion-icon>
                     <span>Migros Yemek</span>
                 </a>
@@ -312,7 +322,7 @@
     <!-- Contact & Footer -->
     <footer id="contact" class="footer">
         <div class="container">
-            <div class="footer-cta reveal">
+            <div class="footer-cta" data-aos="fade-up">
                 <h2>Lezzet Şölenine Hazır Mısınız?</h2>
                 <p>Hemen masanızı ayırtın veya paket sipariş vererek Flash Han Tantuni Döner lezzetini evinize taşıyın.</p>
                 <div class="cta-buttons" style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
@@ -322,19 +332,19 @@
             </div>
             
             <div class="footer-grid">
-                <div class="footer-brand">
+                <div class="footer-brand" data-aos="fade-right">
                     <a href="#" class="logo">
                         <ion-icon name="flame"></ion-icon> Flash Han <span>Tantuni Döner</span>
                     </a>
                     <p>Geleneksel Türk lezzetlerinin, ateşin ve ustalığın modern mimari ile buluştuğu nokta.</p>
                 </div>
-                <div class="footer-contact">
+                <div class="footer-contact" data-aos="fade-up" data-aos-delay="100">
                     <h3>İletişim</h3>
                     <p><ion-icon name="location-outline"></ion-icon> Lezzet Caddesi No:42, Gurme Mah. İstanbul</p>
                     <p><ion-icon name="call-outline"></ion-icon> +90 (555) 123 45 67</p>
                     <p><ion-icon name="mail-outline"></ion-icon> info@flashhan.com</p>
                 </div>
-                <div class="footer-hours">
+                <div class="footer-hours" data-aos="fade-left" data-aos-delay="200">
                     <h3>Çalışma Saatleri</h3>
                     <p>Pzt - Cum: 11:00 - 23:00</p>
                     <p>Cmt - Paz: 11:00 - 01:00</p>
@@ -343,7 +353,6 @@
             </div>
             <div class="footer-bottom">
                 <p>&copy; 2026 Flash Han Tantuni Döner Salonu. Tüm hakları saklıdır.</p>
-                <button id="openSssDrawer" class="btn-text">SSS ve Gizlilik Politikası</button>
                 <div class="socials">
                     <a href="#"><ion-icon name="logo-instagram"></ion-icon></a>
                     <a href="#"><ion-icon name="logo-facebook"></ion-icon></a>
@@ -354,7 +363,7 @@
     </footer>
 
     <!-- Floating Contact Buttons -->
-    <div class="floating-contacts">
+    <div class="floating-contacts" data-aos="zoom-in" data-aos-delay="1000" data-aos-anchor-placement="top-bottom">
         <a href="tel:+905551234567" class="float-btn phone-btn" title="Bizi Arayın">
             <i class="fas fa-phone-alt"></i>
         </a>
@@ -400,6 +409,8 @@
         </div>
     </div>
 
+    <!-- AOS Script -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
